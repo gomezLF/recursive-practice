@@ -3,37 +3,24 @@ package model;
 public class RecursiveFunctions {
 	
 	public static int factorial(int n) {
-		return factorial(n, n);
-	}
-	
-	private static int factorial(int n, int value) {
 		if(n == 0) {
-			return value;
-			
+			return 1;
 		}else {
-			return value*factorial(n-1, value);
+			return n * factorial(n-1);
 		}
 	}
 	
-	
-	
 	public static int finonacci(int n) {
-		return finonacci(n, 1);
-	}
-	
-	private static int finonacci(int n, int value) {
 		if(n == 0) {
 			return 0;
+			
 		}else if(n == 1) {
 			return 1;
 			
 		}else {
-			return value + finonacci(n-1, value);
+			return finonacci(n-1) + finonacci(n-2);
 		}
 	}
-	
-	
-	
 	
 	public static int arraySummatory(int[] array) {
 		return arraySummary(array, array.length - 1);
